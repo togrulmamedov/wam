@@ -57,6 +57,10 @@ li > a {
     padding-left: 20px;
 }
 
+li > a:hover {
+    color: #ffffff;
+}
+
 .sub-menu--item {
     padding-left: 40px;
 }
@@ -67,6 +71,11 @@ ul.sub-menu {
 
 a {
     color: #e8b548;
+}
+
+a.mw-menu--item,
+a.sub-menu--item {
+    text-decoration: none;
 }
 
 ul {
