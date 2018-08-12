@@ -1,9 +1,5 @@
 /* шапка */
 .header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 200px;
     background-color: #f5f5f5;
 }
 
@@ -29,7 +25,6 @@
     left: 0;
     z-index: 100;
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    width: 250px;
     background-color: #400c0c;
     padding-left: 0px;
     padding-right: 0px;
@@ -46,44 +41,42 @@
     font-family: Calibri;
 }
 
-.mw-sidebar li,
-hr{
-    border-bottom: #78441f solid 1px;
-}
-
 hr{
     padding: 0;
     margin: 0;
-}
-
-li > a {
-    padding-left: 20px;
-}
-
-li > a:hover {
-    color: #ffffff;
-}
-
-.sub-menu--item {
-    padding-left: 40px;
-}
-
-ul.sub-menu {
-    background: rgba(84, 7, 7, 0.92);
 }
 
 a {
     color: #e8b548;
 }
 
-a.mw-menu--item,
-a.sub-menu--item {
-    text-decoration: none;
-}
-
 ul {
     list-style-type: none;
     padding: 0px 0px 0px 0px;
+}
+
+.mw-sidebar li,
+hr{
+    border-bottom: #78441f solid 1px;
+}
+
+li > a:hover {
+    color: #ffffff;
+}
+
+.sub-menu {
+    background: rgba(84, 7, 7, 0.92);
+}
+
+a.mw-menu--item,
+a.sub-menu--item {
+    display: block;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+a.sub-menu--item {
+    padding-left: 40px;
 }
 
 .sub-menu--media li,
@@ -105,27 +98,14 @@ li.no-border {
     box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.10);;
 }
 
-/*@media only screen and (min-width: 540px) and (max-width: 720px){
-	.card{
-		width: auto;
-	}
-}
-*/
-.card-link{
-
-}
-
-.mt-220 {
-    margin-top: 220px;
+.mt-20 {
+    margin-top: 20px;
 }
 
 /* конец контента главной страницы*/
 
 /* подвал */
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     height: 100px;
     line-height: 100px;
     background-color: #f5f5f5;
