@@ -14,34 +14,36 @@
         <div class="row">
             <!-- меню -->
             <nav class="col-md-2 d-none d-md-block mw-sidebar">
-                <div class="sidebar-sticky">
-                    <ul>
-                        <li><a class="mw-menu--item" href="#">Мы</a></li>
-                        <li><a class="mw-menu--item" href="#">Главная</a></li>
-                        <li><a class="mw-menu--item" href="#">Деятельность "ВАМ"</a></li>
-                        <li class="no-border">
-                            <a class="mw-menu--item" id="mw-media" href="#">Медиа</a>
-                            <hr/>
+                <div class="mw-sidebar--sticky">
+
+                    <ul class="mw-menu">
+                        <li class="mw-menu--item"><a class="mw-menu--link" href="#">Мы</a></li>
+                        <li class="mw-menu--item"><a class="mw-menu--link" href="#">Главная</a></li>
+                        <li class="mw-menu--item"><a class="mw-menu--link" href="#">Деятельность "ВАМ"</a></li>
+                        <li class="mw-menu--item no-border">
+                            <a class="mw-menu--link" id="mw-media" href="#">Медиа</a>
+                            <hr class="mw-line"/>
                             <ul class="sub-menu sub-menu--media">
-                                <li><a class="sub-menu--item" href="#">Фотографии</a></li>
-                                <li><a class="sub-menu--item" href="#">Видео</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Фотографии</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Видео</a></li>
                             </ul>
                         </li>
-                        <li class="no-border">
-                            <a class="mw-menu--item" id="mw-interesting" href="#">Интересное</a>
-                            <hr/>
+                        <li class="mw-menu--item no-border">
+                            <a class="mw-menu--link" id="mw-interesting" href="#">Интересное</a>
+                            <hr class="mw-line"/>
                             <ul class="sub-menu sub-menu--interesting">
-                                <li><a class="sub-menu--item" href="#">Здоровье и красота</a></li>
-                                <li><a class="sub-menu--item" href="#">Религия</a></li>
-                                <li><a class="sub-menu--item" href="#">Семья</a></li>
-                                <li><a class="sub-menu--item" href="#">Искусство</a></li>
-                                <li><a class="sub-menu--item" href="#">Жизнь</a></li>
-                                <li><a class="sub-menu--item" href="#">Кулинария</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Здоровье и красота</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Религия</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Семья</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Искусство</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Жизнь</a></li>
+                                <li class="sub-menu--item"><a class="sub-menu--link" href="#">Кулинария</a></li>
                             </ul>
                         </li>
-                        <li><a class="mw-menu--item" href="#">Проекты</a></li>
-                        <li><a class="mw-menu--item" href="#">Контакты</a></li>
+                        <li class="mw-menu--item"><a class="mw-menu--link" href="#">Проекты</a></li>
+                        <li class="mw-menu--item"><a class="mw-menu--link" href="#">Контакты</a></li>
                     </ul>
+                    
                 </div>
             </nav>
             <!-- конец меню -->
@@ -53,8 +55,24 @@
                         <img class="logo" src="images/logo_example.jpg" width="100px" height="100px" alt="Logo">
                         <img class="title" src="images/header.jpg" width="400px" height="150px" alt="Title">
                         <div class="ls-container ml-auto d-flex flex-column justify-content-between">
-                            <div class="lang"></div>
-                            <div class="social"></div>
+                            <div class="mw-lang form-group">
+                            	<select class="form-control">
+                            		<option>RU</option>
+                            		<option>EN</option>
+                            		<option>UA</option>
+                            	</select>
+                            </div>
+                            <div class="mw-social d-flex flex-row justify-content-center align-items-center">
+	                            <a class="mw-social--link" href="#">
+	                                <i class="fab fa-facebook fa-2x"></i>
+	                            </a>
+	                            <a class="mw-social--link" href="#">
+	                                <i class="fab fa-instagram fa-2x"></i>
+	                            </a>
+	                            <a class="mw-social--link" href="#">
+	                                <i class="fab fa-youtube-square fa-2x"></i>
+	                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,7 +91,7 @@
                             <!-- HOMEPAGE MAIN CONTENT -->
                             <div class="d-flex flex-row flex-wrap justify-content-center justify-content-lg-between">
                                 <div class="card-container">
-                                    <div class="card">
+                                    <div class="card no-border">
                                         <img class="card-img-top" src="images/test.jpg" width="260px" height="180px" alt="Card Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><a href="#" class="card-link">Card title</a></h5>
@@ -83,7 +101,7 @@
                                     </div>
                                 </div>
                                 <div class="card-container">
-                                    <div class="card">
+                                    <div class="card no-border">
                                         <img class="card-img-top" src="images/test.jpg" width="260px" height="180px" alt="Card Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><a href="#" class="card-link">Card title</a></h5>
@@ -93,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div class="card-container">
-                                    <div class="card">
+                                    <div class="card no-border">
                                         <img class="card-img-top" src="images/test.jpg" width="260px" height="180px" alt="Card Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><a href="#" class="card-link">Card title</a></h5>
@@ -103,7 +121,7 @@
                                     </div>
                                 </div>
                                 <div class="card-container">
-                                    <div class="card">
+                                    <div class="card no-border">
                                         <img class="card-img-top" src="images/test.jpg" width="260px" height="180px" alt="Card Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><a href="#" class="card-link">Card title</a></h5>
@@ -113,7 +131,7 @@
                                     </div>
                                 </div>
                                 <div class="card-container">
-                                    <div class="card">
+                                    <div class="card no-border">
                                         <img class="card-img-top" src="images/test.jpg" width="260px" height="180px" alt="Card Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><a href="#" class="card-link">Card title</a></h5>
@@ -122,7 +140,16 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="card-container">
+                                    <div class="card no-border">
+                                        <img class="card-img-top" src="images/test.jpg" width="260px" height="180px" alt="Card Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="#" class="card-link">Card title</a></h5>
+                                            <p class="card-text">This is a card with supporting text below as a natural lead-in to additional content.</p>
+                                            <p class="card-text"><small class="text-muted">01.08.2017</small></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /HOMEPAGE MAIN CONTENT -->
                         </div>
