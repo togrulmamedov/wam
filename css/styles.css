@@ -99,6 +99,10 @@
 .no-border {
     border: 0 !important;
 }
+
+.bg-white {
+    background: #ffffff;
+}
 /* конец основной разметки */
 
 /* контент главной страницы*/
@@ -120,7 +124,8 @@
 .footer {
     height: 100px;
     line-height: 100px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
+    border-top: 1px solid #e8b548;
 }
 
 .social-footer {
