@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	$(".intro-banner-vdo-play-btn").hide();
+	$(".intro-banner-vdo-play-btn").fadeOut("slow");
 });
