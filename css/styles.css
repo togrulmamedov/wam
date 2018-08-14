@@ -30,7 +30,7 @@
     padding-right: 0px;
 }
 
-.sidebar-sticky{
+.mw-sidebar--sticky{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -41,51 +41,51 @@
     font-family: Calibri;
 }
 
-hr{
+.mw-line{
     padding: 0;
     margin: 0;
 }
 
-a {
-    color: #e8b548;
-}
-
-ul {
+.mw-menu,
+.sub-menu {
     list-style-type: none;
-    padding: 0px 0px 0px 0px;
-}
-
-.mw-sidebar li,
-hr{
-    border-bottom: #78441f solid 1px;
-}
-
-li > a:hover {
-    color: #ffffff;
+    padding: 0;
 }
 
 .sub-menu {
     background: rgba(84, 7, 7, 0.92);
 }
 
-a.mw-menu--item,
-a.sub-menu--item {
+.mw-menu--link,
+.sub-menu--link {
+    color: #e8b548;
     display: block;
-    text-decoration: none;
+    text-decoration: none !important;
     padding-left: 20px;
 }
 
-a.sub-menu--item {
+.sub-menu--link {
     padding-left: 40px;
 }
 
-.sub-menu--media li,
-.sub-menu--interesting li{
+.mw-line,
+.mw-sidebar .mw-menu--item,
+.mw-sidebar .sub-menu--item {
+    border-bottom: #78441f solid 1px;
+}
+
+.mw-menu--item > .mw-menu--link:hover,
+.sub-menu--item > .sub-menu--link:hover {
+    color: #ffffff;
+}
+
+.sub-menu--media .sub-menu--item,
+.sub-menu--interesting .sub-menu--item{
     display: none;
 }
 
-li.no-border {
-    border: 0;
+.no-border {
+    border: 0 !important;
 }
 /* конец основной разметки */
 
