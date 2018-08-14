@@ -27,6 +27,11 @@
 .mw-lang, .mw-social {
     width: 100%;
 }
+
+.title {
+    max-width: 100%;
+    max-height: auto;
+}
 /* конец шапки*/
 
 /* основная разметка */
