@@ -153,11 +153,13 @@
 /* конец подвала */
 
 /* блоги */
-.title--dark {
+.title--dark,
+.card-link {
     color: #400c0c
 }
 
-.title--dark:hover {
+.title--dark:hover,
+.card-link:hover {
     color: rgba(84, 7, 7, 0.92);
 }
 /* конец блогов */
