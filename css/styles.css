@@ -1,6 +1,9 @@
 /* шапка */
 .header {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
+    background-image: url('../images/2.jpg');
+    background-size: cover;
+    border-bottom: 1px solid #e8b548;
 }
 
 .ls-container {
