@@ -1,6 +1,9 @@
 /* шапка */
 .header {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
+    background-image: url('../images/2.jpg');
+    background-size: cover;
+    border-bottom: 1px solid #e8b548;
 }
 
 .mw-social {
@@ -9,6 +12,11 @@
 
 .mw-social--link {
     padding: 5px;
+    color: #400c0c;
+}
+
+.mw-social--link:hover {
+    color: rgba(84, 7, 7, 0.92);
 }
 
 .ls-container {
@@ -18,6 +26,11 @@
 
 .mw-lang, .mw-social {
     width: 100%;
+}
+
+.title {
+    max-width: 100%;
+    max-height: auto;
 }
 /* конец шапки*/
 
@@ -91,6 +104,20 @@
 .no-border {
     border: 0 !important;
 }
+
+.bg-white {
+    background: #ffffff;
+}
+
+.mw-main {
+    min-height: 800px;
+}
+
+.mw-page--title {
+    color: #e8b548;
+    text-shadow: 1px 1px 1px #d8d8d8;
+    border-bottom: 1px solid #e8b548;
+}
 /* конец основной разметки */
 
 /* контент главной страницы*/
@@ -112,7 +139,8 @@
 .footer {
     height: 100px;
     line-height: 100px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
+    border-top: 1px solid #e8b548;
 }
 
 .social-footer {
@@ -120,7 +148,39 @@
 }
 
 .social-footer > a {
-    margin-left: 10px;
     text-decoration: none;
 }
 /* конец подвала */
+
+/* блоги */
+.title--dark,
+.title--dark > a {
+    color: #400c0c
+}
+
+.title--dark:hover,
+.title--dark > a:hover {
+    color: rgba(84, 7, 7, 0.92);
+}
+/* конец блогов */
+
+.mw-article {
+    margin-bottom: 20px;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.mw-article--date {
+    font-size: smaller;
+}
+
+@media (min-width: 576px) {
+    .mw-article--info {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 577px) {
+    .mw-article--info {
+        margin-top: 20px;
+    }
+}
