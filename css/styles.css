@@ -108,6 +108,10 @@
 .bg-white {
     background: #ffffff;
 }
+
+.mw-main {
+    min-height: 800px;
+}
 /* конец основной разметки */
 
 /* контент главной страницы*/
@@ -141,3 +145,9 @@
     text-decoration: none;
 }
 /* конец подвала */
+
+.mw-page--title {
+    color: #e8b548;
+    text-shadow: 1px 1px 1px #d8d8d8;
+    border-bottom: 1px solid #e8b548;
+}
