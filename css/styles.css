@@ -12,6 +12,11 @@
 
 .mw-social--link {
     padding: 5px;
+    color: #400c0c;
+}
+
+.mw-social--link:hover {
+    color: rgba(84, 7, 7, 0.92);
 }
 
 .ls-container {
@@ -123,7 +128,6 @@
 }
 
 .social-footer > a {
-    margin-left: 10px;
     text-decoration: none;
 }
 /* конец подвала */
