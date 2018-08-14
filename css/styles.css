@@ -154,12 +154,33 @@
 
 /* блоги */
 .title--dark,
-.card-link {
+.title--dark > a {
     color: #400c0c
 }
 
 .title--dark:hover,
-.card-link:hover {
+.title--dark > a:hover {
     color: rgba(84, 7, 7, 0.92);
 }
 /* конец блогов */
+
+.mw-article {
+    margin-bottom: 20px;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.mw-article--date {
+    font-size: smaller;
+}
+
+@media (min-width: 576px) {
+    .mw-article--info {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 577px) {
+    .mw-article--info {
+        margin-top: 20px;
+    }
+}
