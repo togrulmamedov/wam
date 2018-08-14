@@ -8,6 +8,7 @@
 	transition: opacity 500ms;
 	visibility: hidden;
 	opacity: 0;
+	z-index: 1040;
 }
 .overlay:target {
 	visibility: visible;
@@ -19,7 +20,7 @@
 	border-radius: 5px;
 	width: 49%;
 	position: absolute;
-	left: 35%;
+	left: 25%;
 	/* transition: all 5s ease-in-out; */
 }
 .popup h2 {
@@ -29,14 +30,11 @@
 }
 .popup .close {
 	position: absolute;
-	top: 35px;
-	left: 25px;
-	background: #00495d;
 	transition: all 200ms;
 	font-size: 30px;
 	font-weight: bold;
 	text-decoration: none;
-	color: #fff;
+	color: #000000;
 	padding: 0px 5px;
 }
 .search {
@@ -53,16 +51,20 @@
 }
 
 .popup .close:hover {
-	color: #ffffff;
+	color: rgba(84, 7, 7, 0.92);
 }
 .popup .content {/*	max-height: 30%;
 */overflow: auto;border-top: 2px dashed #d1d6d8;margin-top: 16px;}
+
+.popup-image {
+	max-width: 100%;
+}
+
 .div1 {
-	width: 50%;
+	width: 100%;
 	padding: 20px;
 	/* float: left; */
 	height: auto;
-	background:#fff;
 	border-radius: 25px;
 }
 
