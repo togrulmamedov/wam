@@ -112,6 +112,12 @@
 .mw-main {
     min-height: 800px;
 }
+
+.mw-page--title {
+    color: #e8b548;
+    text-shadow: 1px 1px 1px #d8d8d8;
+    border-bottom: 1px solid #e8b548;
+}
 /* конец основной разметки */
 
 /* контент главной страницы*/
@@ -146,8 +152,12 @@
 }
 /* конец подвала */
 
-.mw-page--title {
-    color: #e8b548;
-    text-shadow: 1px 1px 1px #d8d8d8;
-    border-bottom: 1px solid #e8b548;
+/* блоги */
+.title--dark {
+    color: #400c0c
 }
+
+.title--dark:hover {
+    color: rgba(84, 7, 7, 0.92);
+}
+/* конец блогов */
