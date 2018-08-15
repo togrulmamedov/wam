@@ -6,4 +6,12 @@ jQuery(function () {
     $("#mw-interesting").click(function () {
         $(".sub-menu--interesting li").slideToggle("slow");
     });
+
+    $("#mw-media").hover(
+    	function () {
+    		$("#mw-media .mw-angle").css("color", "#ffffff");
+    	},
+    	function() {
+    		$("#mw-media .mw-angle").css("color", "#e8b548");
+    	});
 });

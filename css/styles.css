@@ -59,6 +59,7 @@
 }
 
 .mw-line{
+    clear: both;
     padding: 0;
     margin: 0;
 }
@@ -122,6 +123,13 @@
 .badge-mw {
     color: #ffffff;
     background-color: #e8b548;
+}
+
+.mw-angle {
+    line-height: 30px;
+    float: right;
+    color: #e8b548;
+    margin-right: 20px;
 }
 /* конец основной разметки */
 
