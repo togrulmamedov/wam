@@ -11,7 +11,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title><?php echo get_bloginfo('name'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -102,13 +102,13 @@
                             </select>
                         </div>
                         <div class="mw-social d-flex flex-row justify-content-center align-items-center">
-                            <a class="mw-social--link" href="#">
+                            <a class="mw-social--link" href="<?php echo get_option('facebook'); ?>">
                                 <i class="fab fa-facebook-f fa-2x"></i>
                             </a>
-                            <a class="mw-social--link" href="#">
+                            <a class="mw-social--link" href="<?php echo get_option('instagram'); ?>">
                                 <i class="fab fa-instagram fa-2x"></i>
                             </a>
-                            <a class="mw-social--link" href="#">
+                            <a class="mw-social--link" href="<?php echo get_option('youtube'); ?>">
                                 <i class="fab fa-youtube fa-2x"></i>
                             </a>
                         </div>

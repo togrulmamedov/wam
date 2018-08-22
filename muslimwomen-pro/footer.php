@@ -15,13 +15,13 @@
     <div class="container">
         <span>Всегда с ВАМи!</span>
         <div class="social-footer d-flex flex-row justify-content-center align-items-center">
-            <a class="mw-social--link" href="#">
+            <a class="mw-social--link" href="<?php echo get_option('facebook'); ?>">
                 <i class="fab fa-facebook-f fa-2x"></i>
             </a>
-            <a class="mw-social--link" href="#">
+            <a class="mw-social--link" href="<?php echo get_option('instagram'); ?>">
                 <i class="fab fa-instagram fa-2x"></i>
             </a>
-            <a class="mw-social--link" href="#">
+            <a class="mw-social--link" href="<?php echo get_option('youtube'); ?>">
                 <i class="fab fa-youtube fa-2x"></i>
             </a>
         </div>
