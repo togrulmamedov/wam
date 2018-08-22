@@ -19,7 +19,7 @@
                                     'post_status' => 'publish',
                                     'orderby' => 'date' ,
                                     'order' => 'DESC' ,
-                                    'posts_per_page' => 10,
+                                    'posts_per_page' => 20,
                                     'paged' => get_query_var('paged'),
                                     'post_parent' => $parent
                                 );
