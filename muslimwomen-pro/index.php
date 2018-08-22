@@ -13,19 +13,25 @@
                         <!-- основной контент -->
                         <!-- HOMEPAGE MAIN CONTENT -->
                         <div class="d-flex flex-row flex-wrap justify-content-center justify-content-lg-between">
-                            <div class="card-container">
-                                <div class="card no-border">
-                                    <img class="card-img-top" src="images/test.jpg" width="260px" height="180px" alt="Card Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title title--dark"><a href="#" class="card-link">Card title</a></h5>
-                                        <p class="card-text">This is a card with supporting text below as a natural lead-in to additional content.</p>
-                                        <p class="card-text d-flex flex-row justify-content-between">
-                                            <small class="text-muted">01.08.2017</small>
-                                            <span class="badge badge-mw">Статьи</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                                <?php
+                                $args = array(
+                                    'post_type' => 'post' ,
+                                    'post_status' => 'publish',
+                                    'orderby' => 'date' ,
+                                    'order' => 'DESC' ,
+                                    'posts_per_page' => 10,
+                                    'paged' => get_query_var('paged'),
+                                    'post_parent' => $parent
+                                );
+                                $q = new WP_Query($args);
+                                if ( $q->have_posts() ) {
+                                    while ( $q->have_posts() ) {
+                                        $q->the_post();
+                                        get_template_part( 'index-content', get_post_format());
+                                    }
+                                    wp_reset_postdata();
+                                }
+                            ?>
                         </div>
                         <!-- /HOMEPAGE MAIN CONTENT -->
                         <!-- конец основного контента -->
