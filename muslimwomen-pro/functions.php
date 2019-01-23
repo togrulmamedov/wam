@@ -183,7 +183,7 @@ function wpshout_custom_sizes($sizes){
 ==============================
 */
 
-function mw_widgets_init() {
+function mw_widgets_init(){
 
     // register_sidebar(array(
     //     'name' => 'Header widget zone',

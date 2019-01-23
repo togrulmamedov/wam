@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: togrul.mamedov
- * Date: 22.08.2018
- * Time: 16:25
- */
-?>
-
 <?php get_header(); ?>
 <!-- заголовок -->
 <div class="container-fluid mw-page--title text-center text-sm-left mt-3 mb-3">
