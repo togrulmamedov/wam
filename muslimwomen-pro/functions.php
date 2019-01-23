@@ -1,13 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: togrul.mamedov
- * Date: 22.08.2018
- * Time: 15:53
- */
-?>
-
-<?php
 
 function startwordpress_scripts() {
     wp_register_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
