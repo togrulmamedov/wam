@@ -1,6 +1,6 @@
 <?php
 
-function custom_settings_add_menu() { //removed null and 99 at the end
+function custom_settings_add_menu() {
     // Generate 'Custom Settings' admin page
     add_menu_page('Custom Settings', 'Custom Settings', 'manage_options', 'custom-settings', 'custom_settings_page');
 
@@ -12,18 +12,8 @@ function custom_settings_add_menu() { //removed null and 99 at the end
 add_action('admin_menu', 'custom_settings_add_menu');
 
 
-function custom_settings_page() { ?>
-    <div class="wrap">
-        <h1>Social Settings</h1>
-        <form method="post" action="options.php">
-            <?php
-                do_settings_sections('theme-options');
-                settings_fields('custom');
-                submit_button();
-            ?>
-        </form>
-    </div>
-    <?php
+function custom_settings_page() {
+    require_once get_template_directory() . '/templates/social-settings.php';
 }
 
 function custom_settings_banner_page() {
