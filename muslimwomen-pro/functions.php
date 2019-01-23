@@ -1,5 +1,8 @@
 <?php
 
+require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';    // https://github.com/wp-bootstrap/wp-bootstrap-navwalker
+require_once get_template_directory() . '/classes/class-sidebar-walker.php';
+
 function startwordpress_scripts() {
     //  STYLES
     // wp_register_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -206,6 +209,18 @@ function mw_widgets_init(){
     );
 }
 add_action( 'widgets_init', 'mw_widgets_init' );
+
+/*
+==============================
+    NAVIGATION MENUS
+==============================
+*/
+register_nav_menus(
+    array(
+        'primary' => __('Primary Menu', 'Sidebar menu'),
+        'secondary' => __('Secondary Menu', 'Mobile nav')
+    )
+);
 
 
 ?>

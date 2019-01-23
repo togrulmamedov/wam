@@ -1,8 +1,3 @@
-<?php
-/*
-    Template Name: Home template
-*/
-?>
 <?php get_header(); ?>
 
     <div class="container-fluid">
@@ -14,29 +9,17 @@
                     'orderby' => 'date',
                     'order' => 'DESC',
                     'posts_per_page' => 20,
-                    'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
+                    'paged' => get_query_var('paged'),
                     'post_parent' => $parent
                 );
-                
                 $q = new WP_Query($args);
-
                 if ($q->have_posts()){
                     while ($q->have_posts()){
                         $q->the_post();
-                        get_template_part('index-content', get_post_format());  // if the post format is video, then the template will be 'index-content-video'
+                        get_template_part('content', 'search');  // the template will be 'content-search'
                     }
-            ?>
-
-            <!-- pagination -->
-            <div>
-                <?php next_posts_link('< Older Posts', 2); ?>
-                <?php previous_posts_link('Newer Posts >', 2); ?>
-            </div>
-
-            <?php
+                    wp_reset_postdata();
                 }
-
-                wp_reset_postdata();
             ?>
         </div>
     </div>

@@ -75,7 +75,21 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mwNavbarNavDropdown" aria-controls="mwNavbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mwNavbarNavDropdown">
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'secondary',
+                            'depth' => 2,
+                            'container' => 'div',
+                            'container_class' => 'collapse navbar-collapse',
+                            'container_id' => 'mwNavbarNavDropdown',
+                            'menu_class' => 'navbar-nav',
+                            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker' => new WP_Bootstrap_Navwalker()
+                        )
+                    );
+                ?>
+                <!-- <div class="collapse navbar-collapse" id="mwNavbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Мы</a>
@@ -116,7 +130,7 @@
                             <a class="nav-link" href="#">Контакты</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </nav>
             <!-- конец меню для мобильных устройств -->
 

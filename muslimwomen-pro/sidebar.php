@@ -2,8 +2,19 @@
     dynamic_sidebar('sidebar-menu');
 ?>
 <nav class="col-md-2 d-none d-md-block mw-sidebar">
-    <div class="mw-sidebar--sticky">
-        <ul class="mw-menu">
+    <!-- <div class="mw-sidebar--sticky"> -->
+        <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'primary',
+                    'container' => 'div',
+                    'container_class' => 'mw-sidebar--sticky',
+                    'menu_class' => 'mw-menu',
+                    'walker' => new SidebarWalker()
+                )
+            );
+        ?>
+        <!-- <ul class="mw-menu">
             <li class="mw-menu--item"><a class="mw-menu--link" href="#">Мы</a></li>
             <li class="mw-menu--item"><a class="mw-menu--link" href="#">Главная</a></li>
             <li class="mw-menu--item"><a class="mw-menu--link" href="#">Деятельность "ВАМ"</a></li>
@@ -35,6 +46,6 @@
             </li>
             <li class="mw-menu--item"><a class="mw-menu--link" href="#">Проекты</a></li>
             <li class="mw-menu--item"><a class="mw-menu--link" href="#">Контакты</a></li>
-        </ul>
-    </div>
+        </ul> -->
+    <!-- </div> -->
 </nav>
