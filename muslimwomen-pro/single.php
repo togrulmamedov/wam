@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: togrul.mamedov
- * Date: 22.08.2018
- * Time: 16:26
- */
-?>
-
 <?php get_header(); ?>
 <?php // NEED TO CUSTOMIZE IT! ?>
 <div class="container-fluid text-type">

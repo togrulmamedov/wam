@@ -160,6 +160,7 @@ add_action('init', 'mw_theme_setup');
 
 add_theme_support('post-thumbnails');
 add_theme_support('post-formats', array('gallery', 'video'));
+add_theme_support('html5', array('search-form'));
 
 /*
 ==============================
