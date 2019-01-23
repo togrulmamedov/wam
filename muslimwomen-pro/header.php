@@ -5,11 +5,11 @@
     <title><?php echo get_bloginfo('name'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/side-button.css">
-    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/loader.css"> -->
 
     <?php wp_head(); ?>
 </head>
@@ -35,45 +35,7 @@
 <div class="container-fluid">
     <div class="row">
         <!-- меню -->
-        <nav class="col-md-2 d-none d-md-block mw-sidebar">
-            <div class="mw-sidebar--sticky">
-
-                <ul class="mw-menu">
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Мы</a></li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Главная</a></li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Деятельность "ВАМ"</a></li>
-                    <li class="mw-menu--item no-border">
-                        <a class="mw-menu--link" id="mw-media" href="#">
-                            Медиа
-                            <i class="fa fa-angle-down mw-angle"></i>
-                        </a>
-                        <hr class="mw-line"/>
-                        <ul class="sub-menu sub-menu--media">
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Фотографии</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Видео</a></li>
-                        </ul>
-                    </li>
-                    <li class="mw-menu--item no-border">
-                        <a class="mw-menu--link" id="mw-interesting" href="#">
-                            Интересное
-                            <i class="fa fa-angle-down mw-angle"></i>
-                        </a>
-                        <hr class="mw-line"/>
-                        <ul class="sub-menu sub-menu--interesting">
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Здоровье и красота</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Религия</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Семья</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Искусство</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Жизнь</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Кулинария</a></li>
-                        </ul>
-                    </li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Проекты</a></li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Контакты</a></li>
-                </ul>
-
-            </div>
-        </nav>
+        <?php get_sidebar() ?>
         <!-- конец меню -->
 
         <div class="col-md-9 ml-sm-auto col-lg-10 pl-0 pr-0">
