@@ -12,7 +12,8 @@
             <p class="card-text"><?php the_excerpt(); ?></p>
             <p class="card-text d-flex flex-row justify-content-between">
                 <small class="text-muted"><?php the_date(); ?></small>
-                <span class="badge badge-mw">Статьи</span>
+                <?php $categoryName = get_the_category(); ?>
+                <span class="badge badge-mw"><?php echo $categoryName[0]->cat_name; ?></span>
             </p>
         </div>
     </div>
