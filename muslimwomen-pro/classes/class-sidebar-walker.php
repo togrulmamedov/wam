@@ -28,7 +28,7 @@ class SidebarWalker extends Walker_Nav_Menu{
      * Handles <ul> tag generation
      *
      * @param [string] $output
-     * @param [int] $depth
+     * @param [integer] $depth
      * @return void
      */
     function start_lvl(&$output, $depth){
@@ -37,7 +37,17 @@ class SidebarWalker extends Walker_Nav_Menu{
         $output .= "\n" . $indent . "<ul class=\"" . $ulElementClass . "\">" . "\n";
     }
 
-    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0){    // handles <li>, <a> and <span> generation
+    /**
+     * Handles <li>, <a> and <span> tags generation
+     *
+     * @param [string] $output
+     * @param [array] $item
+     * @param integer $depth
+     * @param array $args
+     * @param integer $id
+     * @return void
+     */
+    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0){
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
         $liAttributes = ''        ;
         $classNames = $value = '';

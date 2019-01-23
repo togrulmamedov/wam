@@ -222,5 +222,21 @@ register_nav_menus(
     )
 );
 
+/*
+==============================
+    HEADER FUNCTIONS
+==============================
+*/
 
+function mw_remove_version() {
+    return '';
+}
+
+add_filter('the_generator', 'mw_remove_version');
+
+/*
+==============================
+    
+==============================
+*/
 ?>
