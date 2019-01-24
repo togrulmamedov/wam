@@ -4,6 +4,7 @@ require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.p
 require_once get_template_directory() . '/classes/class-sidebar-walker.php';
 require_once get_template_directory() . '/functions/admin.php'; // administration panel settings
 require_once get_template_directory() . '/functions/enqueue.php';
+require_once get_template_directory() . '/functions/theme-support.php';
 
 /*
 ==============================
@@ -18,7 +19,6 @@ function mw_theme_setup(){
 add_action('init', 'mw_theme_setup');
 
 add_theme_support('post-thumbnails');
-add_theme_support('post-formats', array('gallery', 'video'));
 add_theme_support('html5', array('search-form'));
 
 /*
@@ -44,16 +44,6 @@ function wpshout_custom_sizes($sizes){
 */
 
 function mw_widgets_init(){
-
-    // register_sidebar(array(
-    //     'name' => 'Header widget zone',
-    //     'id' => 'header-lang',
-    //     'before_widget' => '<div class="header-lang--widget">',
-    //     'after_widget' => '</div>',
-    //     'before_title' => '<h2>',
-    //     'after_title' => '</h2>',
-    // ));
-
     // to add another one - add another register_sidebar
     register_sidebar(
         array(

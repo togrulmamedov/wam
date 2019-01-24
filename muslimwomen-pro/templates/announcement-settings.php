@@ -1,11 +1,11 @@
 <div class="wrap">
     <h1>Announcement Settings</h1>
     <?php settings_errors(); ?>
-    <form method="post" action="options.php">
+    <form class="announcement-form" method="post" action="options.php">
         <?php
-            do_settings_sections('announcement-settings');
+            do_settings_sections('custom-settings-announcement');
             settings_fields('announcement-group');
-            submit_button();
+            submit_button('Save Changes', 'primary', 'submit-announcement');
         ?>
     </form>
     <div class="mw-admin--imageWrapper">

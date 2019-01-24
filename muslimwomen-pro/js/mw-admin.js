@@ -26,4 +26,17 @@ $(document).ready(function() {
 
         mediaUploader.open();
     });
+
+    $('#delete-announcement').on('click', function(e){
+        e.preventDefault();
+
+        var answer = confirm("Delete announcement image?");
+
+        if (answer == true){
+            $('#image-announcement').val('');
+            $('.announcement-form').submit();
+        }
+
+        return;
+    });
 })
