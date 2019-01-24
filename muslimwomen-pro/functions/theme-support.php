@@ -44,3 +44,14 @@ add_action('init', 'mw_theme_setup');
 
 add_theme_support('post-thumbnails');
 add_theme_support('html5', array('search-form'));
+
+function mw_get_embedded_media($type = array()){
+    $content = do_shortcode(apply_filters('the_content', get_the_content()));
+    $embed = get_media_embedded_in_content($content, $type);
+
+    if (in_array('audio', $type)){
+        return str_replace('?visual=true', '?visual=false', $embed[0]);
+    }
+
+    return $embed[0];
+}

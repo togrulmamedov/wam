@@ -13,7 +13,9 @@
             <p class="card-text d-flex flex-row justify-content-between">
                 <small class="text-muted"><?php the_date(); ?></small>
                 <?php $categoryName = get_the_category(); ?>
-                <span class="badge badge-mw"><?php echo $categoryName[0]->cat_name; ?></span>
+                <?php if (!empty($categoryName)): ?>
+                    <span class="badge badge-mw"><?php echo $categoryName[0]->cat_name; ?></span>
+                <?php endif; ?>
             </p>
         </div>
     </div>
