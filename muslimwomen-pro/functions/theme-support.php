@@ -2,7 +2,7 @@
 
 /*
 ===============================
-    Theme Support Options
+    THEME SUPPORT OPTIONS
 ===============================
 */
 
@@ -29,3 +29,18 @@ $backgroundOption = get_option('mw_custom_background');
 if (@$backgroundOption == 1){
     add_theme_support('custom-background');
 }
+
+/*
+==============================
+    THEME SUPPORT SETUPS
+==============================
+*/
+
+function mw_theme_setup(){
+    add_theme_support('menus');
+}
+
+add_action('init', 'mw_theme_setup');
+
+add_theme_support('post-thumbnails');
+add_theme_support('html5', array('search-form'));

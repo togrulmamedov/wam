@@ -2,19 +2,20 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php bloginfo('name'); wp_title('|'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/side-button.css">
-    <link rel="stylesheet" href="css/loader.css"> -->
+    <title><?php bloginfo('name'); wp_title('|'); ?></title>
+
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <?php if (is_singular() && pings_open(get_queried_object())): ?>
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <?php endif; ?>
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <!-- loader -->
 <div class="container">
     <div class="row">

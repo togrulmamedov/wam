@@ -1,25 +1,11 @@
 <?php
 
+require_once get_template_directory() . '/functions/cleanup.php';
 require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';    // https://github.com/wp-bootstrap/wp-bootstrap-navwalker
 require_once get_template_directory() . '/classes/class-sidebar-walker.php';
 require_once get_template_directory() . '/functions/admin.php'; // administration panel settings
 require_once get_template_directory() . '/functions/enqueue.php';
 require_once get_template_directory() . '/functions/theme-support.php';
-
-/*
-==============================
-    ADDING THEME SUPPORT
-==============================
-*/
-
-function mw_theme_setup(){
-    add_theme_support('menus');
-}
-
-add_action('init', 'mw_theme_setup');
-
-add_theme_support('post-thumbnails');
-add_theme_support('html5', array('search-form'));
 
 /*
 ==============================
@@ -67,22 +53,3 @@ register_nav_menus(
         'secondary' => __('Secondary Menu', 'Mobile nav')
     )
 );
-
-/*
-==============================
-    HEADER FUNCTIONS
-==============================
-*/
-
-function mw_remove_version() {
-    return '';
-}
-
-add_filter('the_generator', 'mw_remove_version');
-
-/*
-==============================
-    
-==============================
-*/
-?>
