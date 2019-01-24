@@ -1,24 +1,16 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: togrul.mamedov
- * Date: 22.08.2018
- * Time: 15:53
- */
-
-?>
 <!DOCTYPE html>
-<html lang="ru">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
-    <title><?php echo get_bloginfo('name'); ?></title>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php bloginfo('name'); wp_title('|'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<?php bloginfo('description'); ?>">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/side-button.css">
-    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/loader.css"> -->
 
     <?php wp_head(); ?>
 </head>
@@ -44,45 +36,7 @@
 <div class="container-fluid">
     <div class="row">
         <!-- меню -->
-        <nav class="col-md-2 d-none d-md-block mw-sidebar">
-            <div class="mw-sidebar--sticky">
-
-                <ul class="mw-menu">
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Мы</a></li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Главная</a></li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Деятельность "ВАМ"</a></li>
-                    <li class="mw-menu--item no-border">
-                        <a class="mw-menu--link" id="mw-media" href="#">
-                            Медиа
-                            <i class="fa fa-angle-down mw-angle"></i>
-                        </a>
-                        <hr class="mw-line"/>
-                        <ul class="sub-menu sub-menu--media">
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Фотографии</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Видео</a></li>
-                        </ul>
-                    </li>
-                    <li class="mw-menu--item no-border">
-                        <a class="mw-menu--link" id="mw-interesting" href="#">
-                            Интересное
-                            <i class="fa fa-angle-down mw-angle"></i>
-                        </a>
-                        <hr class="mw-line"/>
-                        <ul class="sub-menu sub-menu--interesting">
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Здоровье и красота</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Религия</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Семья</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Искусство</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Жизнь</a></li>
-                            <li class="sub-menu--item"><a class="sub-menu--link" href="#">Кулинария</a></li>
-                        </ul>
-                    </li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Проекты</a></li>
-                    <li class="mw-menu--item"><a class="mw-menu--link" href="#">Контакты</a></li>
-                </ul>
-
-            </div>
-        </nav>
+        <?php get_sidebar() ?>
         <!-- конец меню -->
 
         <div class="col-md-9 ml-sm-auto col-lg-10 pl-0 pr-0">
@@ -122,7 +76,21 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mwNavbarNavDropdown" aria-controls="mwNavbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mwNavbarNavDropdown">
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'secondary',
+                            'depth' => 2,
+                            'container' => 'div',
+                            'container_class' => 'collapse navbar-collapse',
+                            'container_id' => 'mwNavbarNavDropdown',
+                            'menu_class' => 'navbar-nav',
+                            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker' => new WP_Bootstrap_Navwalker()
+                        )
+                    );
+                ?>
+                <!-- <div class="collapse navbar-collapse" id="mwNavbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Мы</a>
@@ -163,11 +131,14 @@
                             <a class="nav-link" href="#">Контакты</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </nav>
             <!-- конец меню для мобильных устройств -->
 
             <!-- строка поиска -->
+            <div class="search-wrapper">
+                <?php get_search_form() ?>
+            </div>
             <!-- конец строки поиска -->
 
             <!-- область для рекламы -->

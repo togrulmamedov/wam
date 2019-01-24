@@ -1,10 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: togrul.mamedov
- * Date: 22.08.2018
- * Time: 17:08
- */
+/*
+    Template Name: 404 template
+*/
 ?>
 
 <!DOCTYPE html>
