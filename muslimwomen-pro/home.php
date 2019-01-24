@@ -14,10 +14,10 @@
                     'orderby' => 'date',
                     'order' => 'DESC',
                     'posts_per_page' => 20,
-                    'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
-                    'post_parent' => $parent
+                    'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
+                    // 'post_parent' => $parent
                 );
-                
+
                 $q = new WP_Query($args);
 
                 if ($q->have_posts()){

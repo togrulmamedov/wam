@@ -1,3 +1,4 @@
+<?php?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -45,9 +46,9 @@
             <div class="header">
                 <div class="container-fluid d-flex flex-row flex-wrap align-items-center justify-content-center">
                     <a href="#">
-                        <img class="logo" src="images/Logo_VAM_2_square.png" width="169px" height="169px" alt="Logo">
+                        <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/Logo_VAM_2_square.png" width="169px" height="169px" alt="Logo">
                     </a>
-                    <img class="title" src="images/7_1.png" width="489px" alt="Title">
+                    <img class="title" src="<?php bloginfo('template_directory'); ?>/images/7_1.png" width="489px" alt="Title">
                     <div class="ls-container ml-sm-auto mt-3 mt-sm-0 d-flex flex-column justify-content-between">
                         <div class="mw-lang form-group">
                             <select class="form-control">

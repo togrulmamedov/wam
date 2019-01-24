@@ -1,5 +1,5 @@
 <?php
-    dynamic_sidebar('sidebar-menu');
+    // dynamic_sidebar('sidebar-menu');
 ?>
 <nav class="col-md-2 d-none d-md-block mw-sidebar">
     <!-- <div class="mw-sidebar--sticky"> -->

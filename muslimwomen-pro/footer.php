@@ -34,16 +34,11 @@
             <a class="close" href="#">
                 <i class="fas fa-times fa-2x"></i>
             </a>
-            <img class="popup-image" src="images/author.jpg" alt="Adverts">
+            <img class="popup-image" src="<?php bloginfo('template_directory'); ?>/images/author.jpg" alt="Adverts">
         </div>
     </div>
 </div>
 <!-- конец объявления -->
-
-<script type="application/javascript" src="js/jquery-3.3.1.js"></script>
-<script type="application/javascript" src="js/bootstrap.js"></script>
-<script type="application/javascript" src="js/menu.js"></script>
-<script type="application/javascript" src="js/loader.js"></script>
 
 <?php wp_footer(); ?>
 </body>

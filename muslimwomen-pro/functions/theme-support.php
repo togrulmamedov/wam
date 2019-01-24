@@ -55,3 +55,21 @@ function mw_get_embedded_media($type = array()){
 
     return $embed[0];
 }
+
+/*
+==============================
+    NAVIGATION MENUS
+==============================
+*/
+
+function mw_register_menus(){
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu', 'Sidebar menu'),
+            'secondary' => __('Secondary Menu', 'Mobile nav')
+        )
+    );
+}
+
+add_action('init', 'mw_register_menus');
+
