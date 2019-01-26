@@ -27,8 +27,8 @@ class SidebarWalker extends Walker_Nav_Menu{
     /**
      * Handles <ul> tag generation
      *
-     * @param [string] $output
-     * @param [integer] $depth
+     * @param string $output
+     * @param integer $depth
      * @return void
      */
     function start_lvl(&$output, $depth = 0, $args = array()){
@@ -40,8 +40,8 @@ class SidebarWalker extends Walker_Nav_Menu{
     /**
      * Handles <li>, <a> and <span> tags generation
      *
-     * @param [string] $output
-     * @param [array] $item
+     * @param string $output
+     * @param array $item
      * @param integer $depth
      * @param array $args
      * @param integer $id
@@ -57,13 +57,13 @@ class SidebarWalker extends Walker_Nav_Menu{
         $classes[] = ($item->current || $item->current_item_anchestor) ? 'mw-current' : ''; // if menu item is current page
 
         if ($depth && $args->walker->has_children){
-            $classes[] = 'sub-menu--item';
+            $classes[] = 'sub-menu--item';  // if <li> is a child element, then add 'sub-menu--item' class to it
         }
 
         $classNames = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
         $classNames = 'class="' . esc_attr($classNames)  . '"';
 
-        $id = apply_filters('nav_menu_item_id', 'mw-menu--itemID-' . $item->ID, $item, $args);
+        $id = apply_filters('nav_menu_item_id', 'mw-menu--itemID-' . $item->ID, $item, $args);  // add id to <li> elements
         $id = strlen($id) ? ' id="' . esc_attr($id) . '"' : '';
 
         $output .= "\n" . $indent . "<li" . $id . $value . $classNames . $liAttributes . ">";
@@ -72,15 +72,13 @@ class SidebarWalker extends Walker_Nav_Menu{
         $attributes .= !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
         $attributes .= !empty($item->xfn) ? ' rel"' . esc_attr($item->xfn) . '"' : '';
         $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
-        // $attributes .= ($args->walker->has_children) ? ' class="sub-menu--link"' : ' class="mw-menu--link"';
-        // $attributes .= ' class="mw-menu--link"';
 
-        if ($args->walker->has_children){
-            $attributes .= ' class="mw-menu--link"';
-        } elseif (in_array('sub-menu--item', $classes)) {
-            $attributes .= ' class="sub-menu--link"';
-        } else {
-            $attributes .= ' class="mw-menu--link"';
+        if ($args->walker->has_children){   // if <li> is not a child element, then we add 'mw-menu--link' class to it
+            $attributes .= ' class="mw-menu--link" id="mw-menu--linkID-' . $item->ID . '"';
+        } elseif (in_array('sub-menu--item', $classes)) {   // if <li> has 'sub-menu--item' class, then we add 'sub-menu--link' class to its <a> children
+            $attributes .= ' class="sub-menu--link" id="sub-menu--linkID-' . $item->ID . '"';
+        } else {    // add 'mw-menu--link' class in any other case
+            $attributes .= ' class="mw-menu--link" id="mw-menu--linkID-' . $item->ID . '"';
         }
 
         $item_output = $args->before;

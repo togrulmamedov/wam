@@ -1,25 +1,25 @@
 jQuery(function () {
-    $("#mw-media").click(function () {
-        $(".sub-menu--media li").slideToggle("slow");
+    $("#mw-menu--linkID-1082").click(function () {
+        $("#mw-menu--itemID-1082 > .sub-menu li").slideToggle("slow");
     });
 
-    $("#mw-interesting").click(function () {
-        $(".sub-menu--interesting li").slideToggle("slow");
+    $("#mw-menu--linkID-1081").click(function () {
+        $("#mw-menu--itemID-1081 > .sub-menu li").slideToggle("slow");
     });
 
-    $("#mw-media").hover(
+    $("#mw-menu--linkID-1082").hover(
     	function () {
-    		$("#mw-media .mw-angle").css("color", "#ffffff");
+    		$("#mw-menu--linkID-1082 .mw-angle").css("color", "#ffffff");
     	},
     	function() {
-    		$("#mw-media .mw-angle").css("color", "#e8b548");
+    		$("#mw-menu--linkID-1082 .mw-angle").css("color", "#e8b548");
     	});
 
-    $("#mw-interesting").hover(
+    $("#mw-menu--linkID-1081").hover(
     	function () {
-    		$("#mw-interesting .mw-angle").css("color", "#ffffff");
+    		$("#mw-menu--linkID-1081 .mw-angle").css("color", "#ffffff");
     	},
     	function() {
-    		$("#mw-interesting .mw-angle").css("color", "#e8b548");
+    		$("#mw-menu--linkID-1081 .mw-angle").css("color", "#e8b548");
     	});
 });

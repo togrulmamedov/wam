@@ -59,19 +59,25 @@
                         </div>
                         <div class="mw-social d-flex flex-row justify-content-center align-items-center">
                             <a class="mw-social--link" href="<?php echo get_option('facebook'); ?>">
-                                <i class="fab fa-facebook-f fa-2x"></i>
+                                <i class="fab fa-facebook-square fa-2x"></i>
                             </a>
                             <a class="mw-social--link" href="<?php echo get_option('instagram'); ?>">
                                 <i class="fab fa-instagram fa-2x"></i>
                             </a>
                             <a class="mw-social--link" href="<?php echo get_option('youtube'); ?>">
-                                <i class="fab fa-youtube fa-2x"></i>
+                                <i class="fab fa-youtube-square fa-2x"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- конец шапки -->
+
+            <!-- строка поиска -->
+            <div class="search-wrapper">
+                <?php get_search_form() ?>
+            </div>
+            <!-- конец строки поиска -->
 
             <!-- меню для мобильных устройств -->
             <nav class="navbar navbar-light sticky-top bg-white d-block d-sm-none">
@@ -92,56 +98,8 @@
                         )
                     );
                 ?>
-                <!-- <div class="collapse navbar-collapse" id="mwNavbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Мы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Деятельность ВАМ</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="mwMediaDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Медиа
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="mwMediaDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Фотографии</a>
-                                <a class="dropdown-item" href="#">Видео</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="mwInterestingDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Интересное
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="mwInterestingDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Блоги</a>
-                                <a class="dropdown-item" href="#">Здоровье и красота</a>
-                                <a class="dropdown-item" href="#">Религия</a>
-                                <a class="dropdown-item" href="#">Семья</a>
-                                <a class="dropdown-item" href="#">Искусство</a>
-                                <a class="dropdown-item" href="#">Жизнь</a>
-                                <a class="dropdown-item" href="#">Кулинария</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Проекты</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </div> -->
             </nav>
             <!-- конец меню для мобильных устройств -->
-
-            <!-- строка поиска -->
-            <div class="search-wrapper">
-                <?php get_search_form() ?>
-            </div>
-            <!-- конец строки поиска -->
 
             <!-- область для рекламы -->
             <!-- конец области для рекламы -->

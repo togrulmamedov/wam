@@ -28,16 +28,3 @@ function wpshout_custom_sizes($sizes){
     INITIALIZE WIDGETS ADMIN MENU
 ==============================
 */
-
-// function mw_widgets_init(){
-//     // to add another one - add another register_sidebar
-//     register_sidebar(
-//         array(
-//             'name' => 'Sidebar menu',
-//             'id' => 'sidebar-menu',
-//             'before_widget' => '<nav class="col-md-2 d-none d-md-block mw-sidebar">',
-//             'after_widget' => '</nav>'
-//         )
-//     );
-// }
-// add_action( 'widgets_init', 'mw_widgets_init' );
