@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Custom template
+    Template Name: News template
 */
 ?>
 <?php get_header(); ?>
@@ -11,23 +11,14 @@
 <!-- конец заголовка -->
 
 <?php
-$categories = get_categories();
-$currentName = 'none';
 
-foreach($categories as $key => $value){
-    if($categories[$key]->name == get_the_title()){
-        $currentName = $categories[$key]->slug;
-    }
-}
-
-if($currentName != 'none'){
     $args = array(
         'post_type' => 'post' ,
         'post_status' => 'publish',
         'orderby' => 'date' ,
         'order' => 'DESC' ,
-        'posts_per_page' => 20,
-        'category_name' => $currentName,
+        'posts_per_page' => 40,
+        'category_name' => 'novosti',
         'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
     );
     $q = new WP_Query($args);
@@ -38,7 +29,6 @@ if($currentName != 'none'){
         }
         wp_reset_postdata();
     }
-}
 
 ?>
 

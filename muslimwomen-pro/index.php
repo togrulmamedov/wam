@@ -9,19 +9,33 @@
                     'orderby' => 'date',
                     'order' => 'DESC',
                     'posts_per_page' => 20,
-                    'paged' => get_query_var('paged'),
-                    'post_parent' => $parent
+                    'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
                 );
+
                 $q = new WP_Query($args);
+
                 if ($q->have_posts()){
                     while ($q->have_posts()){
                         $q->the_post();
                         get_template_part('index-content', get_post_format());  // if the post format is video, then the template will be 'index-content-video'
                     }
-                    wp_reset_postdata();
                 }
+
+                wp_reset_postdata();
             ?>
         </div>
     </div>
+
+    <!-- pagination -->
+    <nav aria-label="MW pagination">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <?php next_posts_link('< Предыдущая'); ?>
+            </li>
+            <li class="page-item">
+                <?php previous_posts_link('Следующая >'); ?>
+            </li>
+        </ul>
+    </nav>
 
 <?php get_footer(); ?>

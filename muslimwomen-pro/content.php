@@ -10,7 +10,7 @@
         <div class="mw-article--info d-flex flex-column flex-shrink-1">
             <h3 class="title--dark"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <p><?php the_excerpt(); ?></p>
-            <p><a href="<?php the_permalink(); ?>">Read more</a></p>
+            <p><a class="mw-color--link" href="<?php the_permalink(); ?>">Подробнее</a></p>
             <p class="mw-article--date"><?php the_date(); ?></p>
         </div>
     </div>

@@ -73,3 +73,17 @@ function mw_register_menus(){
 
 add_action('init', 'mw_register_menus');
 
+/*
+==============================
+    PAGINATION
+==============================
+*/
+
+ini_set( 'mysql.trace_mode', 0 );
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="page-link"';
+}

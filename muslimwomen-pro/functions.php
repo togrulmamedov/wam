@@ -3,8 +3,8 @@
 require_once get_template_directory() . '/functions/cleanup.php';
 require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';    // https://github.com/wp-bootstrap/wp-bootstrap-navwalker
 require_once get_template_directory() . '/classes/class-sidebar-walker.php';
-require_once get_template_directory() . '/functions/admin.php'; // administration panel settings
 require_once get_template_directory() . '/functions/enqueue.php';
+require_once get_template_directory() . '/functions/admin.php'; // administration panel settings
 require_once get_template_directory() . '/functions/theme-support.php';
 
 /*

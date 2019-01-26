@@ -6,7 +6,7 @@
  * @return void
  */
 function mw_load_admin_scripts($hook){
-    if('toplevel_page_custom-settings' != $hook) {
+    if('custom-settings_page_custom-settings-announcement' != $hook) {
         return;
     }
 
@@ -22,7 +22,7 @@ function mw_load_admin_scripts($hook){
     wp_enqueue_script('mw-admin-script');
 }
 
-add_action('admin_enqeue_scripts', 'mw_load_admin_scripts');
+add_action('admin_enqueue_scripts', 'mw_load_admin_scripts');
 
 /**
  * Loads scripts for front-end
@@ -36,6 +36,7 @@ function mw_load_site_scripts(){
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.1', 'all');
     wp_enqueue_style('side-button', get_template_directory_uri() . '/css/side-button.css', array(), '1.0.0', 'all');
     // wp_enqueue_style('loader', get_template_directory_uri() . '/css/loader.css', '1.0.0', array(), 'all');
+    wp_enqueue_style('add-google-font', 'https://fonts.googleapis.com/css?family=Pattaya', false);
 
     // JS
     wp_deregister_script('jquery');

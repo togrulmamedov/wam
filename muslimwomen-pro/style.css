@@ -53,10 +53,12 @@
     bottom: 0;
     left: 0;
     z-index: 100;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
     background-color: #400c0c;
     padding-left: 0px;
     padding-right: 0px;
+    -webkit-box-shadow: 1px 0px 4px 0px rgba(64,12,12,1);
+    -moz-box-shadow: 1px 0px 4px 0px rgba(64,12,12,1);
+    box-shadow: 1px 0px 4px 0px rgba(64,12,12,1);
 }
 
 .mw-sidebar--sticky{
@@ -144,6 +146,14 @@
     margin-right: 20px;
 }
 
+.page-link {
+    color: #400c0c;
+}
+
+.page-link:hover {
+    color: #400c0c;
+}
+
 /*======================================
             MAIN PAGE CONTENT
 ========================================*/
@@ -157,6 +167,11 @@
 
 .mt-20 {
     margin-top: 20px;
+}
+
+.card-container {
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 /*======================================
@@ -177,12 +192,19 @@
     text-decoration: none;
 }
 
+.footer-phrase {
+    font-family: 'Pattaya', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #400c0c;
+}
+
 /*======================================
                  BLOGS
 ========================================*/
 .title--dark,
 .title--dark > a {
-    color: #400c0c
+    color: #400c0c;
 }
 
 .title--dark:hover,
@@ -232,10 +254,10 @@
 }
 
 .search-input:focus {
-    border-left: 1px dashed #212529;
-    box-shadow: 0 0 3px #212529;
-    -moz-box-shadow: 0 0 3px #212529;
-    -webkit-box-shadow: 0 0 3px #212529;
+    border-left: 1px dashed #400c0c;
+    box-shadow: 0 0 3px #400c0c;
+    -moz-box-shadow: 0 0 3px #400c0c;
+    -webkit-box-shadow: 0 0 3px #400c0c;
 }
 
 @media (max-width: 577px) {
@@ -243,4 +265,35 @@
         width: 100%;
         border: none;
     }
+}
+
+/*======================================
+                 CONTACTS
+========================================*/
+
+.contacts-title {
+    color: #400c0c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contacts-content {
+    color: #400c0c;
+    font-size: 18px;
+}
+
+.contacts-item {
+    margin-bottom: 10px;
+}
+
+/*======================================
+                 COMMON
+========================================*/
+
+.mw-color--link {
+    color: #e8b548;
+}
+
+.mw-color--link:hover {
+    color: #400c0c;
 }
