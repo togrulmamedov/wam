@@ -5,7 +5,7 @@
 
     <?php if (have_posts()) :while (have_posts()) : the_post(); ?>
         <?php if (has_post_thumbnail()){
-            the_post_thumbnail('medium', array('class' => 'alignleft'));
+            the_post_thumbnail('medium', array('class' => 'alignleft mw-single--image'));
         } ?>
         <div class="post-customized">
             <?php the_content(); ?>

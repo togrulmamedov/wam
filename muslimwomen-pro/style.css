@@ -197,6 +197,8 @@
     font-weight: bold;
     font-size: 24px;
     color: #400c0c;
+    position: relative;
+    top: 9px;
 }
 
 /*======================================
@@ -236,6 +238,19 @@
     }
 }
 
+.mw-post--video iframe {
+    width: 260px;
+    height: 180px;
+}
+
+.mw-single--image {
+    /* float: left;
+    clear: both;
+    margin-right: 10px; */
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.30);
+
+}
+
 /*======================================
                  SEARCH
 ========================================*/
@@ -265,6 +280,15 @@
         width: 100%;
         border: none;
     }
+
+    .search-input:focus {
+        border: none;
+    }
+}
+
+div.card-container--search {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*======================================
@@ -285,6 +309,20 @@
 .contacts-item {
     margin-bottom: 10px;
 }
+
+/*======================================
+                ICONS
+========================================*/
+
+.mw-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.mw-icon:hover {
+    opacity: 0.8;
+}
+
 
 /*======================================
                  COMMON

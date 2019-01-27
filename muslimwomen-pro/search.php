@@ -1,21 +1,16 @@
 <?php get_header(); ?>
 
     <div class="container-fluid">
-        <div class="d-flex flex-row flex-wrap justify-content-center justify-content-lg-between">
+        <?php
+            global $wp_query;
+            $total_results = $wp_query->found_posts;
+        ?>
+        <h3 class="title-dark text-center text-sm-left mb-3">Результаты поиска (найдено <?php echo $total_results; ?>):</h3>
+        <div class="d-flex flex-row flex-wrap justify-content-center justify-content-lg-start">
             <?php
-                $args = array(
-                    'post_type' => 'post',
-                    'post_status' => 'publish',
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'posts_per_page' => 20,
-                    'paged' => get_query_var('paged'),
-                    'post_parent' => $parent
-                );
-                $q = new WP_Query($args);
-                if ($q->have_posts()){
-                    while ($q->have_posts()){
-                        $q->the_post();
+                if (have_posts()){
+                    while (have_posts()){
+                        the_post();
                         get_template_part('content', 'search');  // the template will be 'content-search'
                     }
                     wp_reset_postdata();

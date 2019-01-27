@@ -7,13 +7,16 @@
         <span class="footer-phrase">Всегда с ВАМи!</span>
         <div class="social-footer d-flex flex-row justify-content-center align-items-center">
             <a class="mw-social--link" href="<?php echo get_option('facebook'); ?>">
-                <i class="fab fa-facebook-square fa-2x"></i>
+                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/facebook.svg" />
             </a>
             <a class="mw-social--link" href="<?php echo get_option('instagram'); ?>">
-                <i class="fab fa-instagram fa-2x"></i>
+                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/instagram.svg" />
             </a>
             <a class="mw-social--link" href="<?php echo get_option('youtube'); ?>">
-                <i class="fab fa-youtube-square fa-2x"></i>
+                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/youtube.svg" />
+            </a>
+            <a class="mw-social--link" href="<?php echo get_option('telegram'); ?>">
+                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/telegram.svg" />
             </a>
         </div>
     </div>
@@ -23,22 +26,24 @@
 </div>
 </div>
 
-<!-- объявление -->
-<div id="feedback">
-    <a href="#popup1">Объявление!</a>
-</div>
+<?php if (!empty(get_option('announcement'))): ?>
+    <!-- объявление -->
+    <div id="feedback">
+        <a href="#popup1">Объявление!</a>
+    </div>
 
-<div id="popup1" class="overlay">
-    <div class="popup">
-        <div class="div1">
-            <a class="close" href="#">
-                <i class="fas fa-times fa-2x"></i>
-            </a>
-            <img class="popup-image" src="<?php bloginfo('template_directory'); ?>/images/author.jpg" alt="Adverts">
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <div class="div1">
+                <a class="close" href="#">
+                    <i class="fas fa-times fa-2x"></i>
+                </a>
+                <img class="popup-image" src="<?php echo get_option('announcement'); ?>" alt="Adverts">
+            </div>
         </div>
     </div>
-</div>
-<!-- конец объявления -->
+    <!-- конец объявления -->
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 </body>

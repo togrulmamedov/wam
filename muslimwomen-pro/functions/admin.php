@@ -62,6 +62,10 @@ function setting_youtube(){
     echo '<input type="text" name="youtube" id="youtube" value="' . esc_attr(get_option('youtube')) . '"/>';
 }
 
+function setting_telegram(){
+    echo '<input type="text" name="telegram" id="telegram" value="' . esc_attr(get_option('telegram')) . '"/>';
+}
+
 function setting_announcement(){
     $announcement = esc_attr(get_option('announcement'));
 
@@ -110,10 +114,12 @@ function custom_settings_init(){
     add_settings_field('facebook', 'Facebook URL', 'setting_facebook', 'custom-settings', 'social-section');
     add_settings_field('instagram', 'Instagram URL', 'setting_instagram', 'custom-settings', 'social-section');
     add_settings_field('youtube', 'Youtube URL', 'setting_youtube', 'custom-settings', 'social-section');
+    add_settings_field('telegram', 'Telegram URL', 'setting_telegram', 'custom-settings', 'social-section');
 
     register_setting('social-group', 'facebook');
     register_setting('social-group', 'instagram');
     register_setting('social-group', 'youtube');
+    register_setting('social-group', 'telegram');
 
     // Announcement
     // id, title, callback, page
@@ -139,6 +145,12 @@ function custom_settings_init(){
 
 /*
 ===============================
-    Callbacks
+    Admin bar
 ===============================
  */
+
+function hide_admin_bar() {
+    return false;
+}
+
+add_filter('show_admin_bar', 'hide_admin_bar');

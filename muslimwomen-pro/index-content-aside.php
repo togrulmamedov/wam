@@ -1,7 +1,11 @@
 <div class="card-container">
     <div class="card no-border">
-        <a href="<?php the_permalink(); ?>" <?php post_class('mw-post--video'); ?>>
-            <?php echo mw_get_embedded_media(array('video', 'iframe')); ?>
+        <a href="<?php the_permalink(); ?>" <?php post_class('mw-post--aside'); ?>>
+            <?php
+                if (has_post_thumbnail()){
+                    the_post_thumbnail('custom-medium');
+                }
+            ?>
         </a>
         <div class="card-body">
             <h5 class="card-title title--dark"><a href="<?php the_permalink(); ?>" class="card-link"><?php the_title(); ?></a></h5>

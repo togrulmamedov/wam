@@ -56,6 +56,16 @@ function mw_get_embedded_media($type = array()){
     return $embed[0];
 }
 
+add_filter('body_class','alter_search_classes');
+function alter_search_classes($classes) {
+    if(is_search()){
+       return array();
+    } else {
+       return $classes;
+    }
+
+}
+
 /*
 ==============================
     NAVIGATION MENUS

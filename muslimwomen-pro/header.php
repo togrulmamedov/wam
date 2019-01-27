@@ -59,13 +59,16 @@
                         </div>
                         <div class="mw-social d-flex flex-row justify-content-center align-items-center">
                             <a class="mw-social--link" href="<?php echo get_option('facebook'); ?>">
-                                <i class="fab fa-facebook-square fa-2x"></i>
+                                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/facebook.svg" />
                             </a>
                             <a class="mw-social--link" href="<?php echo get_option('instagram'); ?>">
-                                <i class="fab fa-instagram fa-2x"></i>
+                                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/instagram.svg" />
                             </a>
                             <a class="mw-social--link" href="<?php echo get_option('youtube'); ?>">
-                                <i class="fab fa-youtube-square fa-2x"></i>
+                                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/youtube.svg" />
+                            </a>
+                            <a class="mw-social--link" href="<?php echo get_option('telegram'); ?>">
+                                <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/telegram.svg" />
                             </a>
                         </div>
                     </div>
