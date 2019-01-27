@@ -7,7 +7,7 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="keywords" content="мусульманка, ассоциация, украина, всеукраинская ассоциация мусульманок, ислам, религия, добро, истина">
 
-    <title><?php bloginfo('name'); wp_title('|'); ?></title>
+    <title><?php wp_title('|'); ?></title>
 
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
