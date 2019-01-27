@@ -85,6 +85,8 @@ function mw_register_strings(){
     pll_register_string('mw-pro', 'Интересное');
     pll_register_string('mw-pro', 'Контакты');
 
+    pll_register_string('mw-pro', 'Opps! Page is not available!');
+
 }
 
 add_action('init', 'mw_register_strings');
