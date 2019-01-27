@@ -1,4 +1,4 @@
-jQuery(function () {
+jQuery(function ($) {
     $("#mw-menu--linkID-1082").click(function () {
         $("#mw-menu--itemID-1082 > .sub-menu li").slideToggle("slow");
     });

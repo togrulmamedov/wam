@@ -68,6 +68,29 @@ function alter_search_classes($classes) {
 
 /*
 ==============================
+    CUSTOM STRINGS (POLYLANG)
+==============================
+*/
+
+function mw_register_strings(){
+    pll_register_string('mw-pro', 'Всегда с ВАМи!');
+    pll_register_string('mw-pro', 'Объявление!');
+    pll_register_string('mw-pro', 'Поиск');
+    pll_register_string('mw-pro', 'Результаты поиска');
+    pll_register_string('mw-pro', 'найдено');
+    pll_register_string('mw-pro', '04071, г. Киев, ул. Лукьяновская 46');
+
+    pll_register_string('mw-pro', 'Главная');
+    pll_register_string('mw-pro', 'Медиа');
+    pll_register_string('mw-pro', 'Интересное');
+    pll_register_string('mw-pro', 'Контакты');
+
+}
+
+add_action('init', 'mw_register_strings');
+
+/*
+==============================
     NAVIGATION MENUS
 ==============================
 */
@@ -97,3 +120,25 @@ add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 function posts_link_attributes() {
     return 'class="page-link"';
 }
+
+/*
+==============================
+    WIDGET AREAS
+==============================
+*/
+
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Language switcher area',
+		'id'            => 'mw-lang-switch',
+		'before_widget' => '<div class="mw-lang form-group">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+}
+
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+?>

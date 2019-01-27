@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <meta name="keywords" content="мусульманка, ассоциация, украина, всеукраинская ассоциация мусульманок, ислам, религия, добро, истина">
 
     <title><?php bloginfo('name'); wp_title('|'); ?></title>
 
@@ -48,15 +49,15 @@
                     <a href="#">
                         <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/Logo_VAM_2_square.png" width="169px" height="169px" alt="Logo">
                     </a>
-                    <img class="title" src="<?php bloginfo('template_directory'); ?>/images/7_1.png" width="489px" alt="Title">
+                    <?php if (get_locale() == 'uk'): ?>
+                        <img class="title" src="<?php bloginfo('template_directory'); ?>/images/VAM_UKR.png" width="489px" alt="Title">
+                    <?php elseif (get_locale() == 'en_US'): ?>
+                        <img class="title" src="<?php bloginfo('template_directory'); ?>/images/vam_eng.png" width="489px" alt="Title">
+                    <?php else: ?>
+                        <img class="title" src="<?php bloginfo('template_directory'); ?>/images/7_1.png" width="489px" alt="Title">
+                    <?php endif; ?>
                     <div class="ls-container ml-sm-auto mt-3 mt-sm-0 d-flex flex-column justify-content-between">
-                        <div class="mw-lang form-group">
-                            <select class="form-control">
-                                <option>RU</option>
-                                <option>EN</option>
-                                <option>UA</option>
-                            </select>
-                        </div>
+                        <?php dynamic_sidebar( 'mw-lang-switch' ); ?>
                         <div class="mw-social d-flex flex-row justify-content-center align-items-center">
                             <a class="mw-social--link" href="<?php echo get_option('facebook'); ?>">
                                 <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/facebook.svg" />

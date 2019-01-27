@@ -4,7 +4,7 @@
 <!-- подвал -->
 <footer class="footer">
     <div class="container">
-        <span class="footer-phrase">Всегда с ВАМи!</span>
+        <span class="footer-phrase"><?php pll_e('Всегда с ВАМи!') ?></span>
         <div class="social-footer d-flex flex-row justify-content-center align-items-center">
             <a class="mw-social--link" href="<?php echo get_option('facebook'); ?>">
                 <img class="mw-icon" src="<?php bloginfo('template_directory'); ?>/icons/facebook.svg" />
@@ -29,7 +29,7 @@
 <?php if (!empty(get_option('announcement'))): ?>
     <!-- объявление -->
     <div id="feedback">
-        <a href="#popup1">Объявление!</a>
+        <a href="#popup1"><?php pll_e('Объявление!'); ?></a>
     </div>
 
     <div id="popup1" class="overlay">
