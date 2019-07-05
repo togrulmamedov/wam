@@ -1,0 +1,371 @@
+/*
+    Theme Name: Muslim Women Pro
+    Author: Sevil & Tohrul
+    Author URI: https://www.facebook.com/tohrulProfile
+    Description: Muslim women pro theme for WordPress
+    Version: 1.1.0
+    Tags: bootstrap, muslim, women, pro, wordpress
+*/
+
+/*======================================
+                HEADER
+========================================*/
+.header {
+    background-color: #ffffff;
+    background-image: url('../images/2.jpg');
+    background-size: cover;
+    border-bottom: 1px solid #e8b548;
+}
+
+.mw-social {
+    text-decoration: none;
+}
+
+.mw-social--link {
+    padding: 5px;
+    color: #400c0c;
+}
+
+.mw-social--link:hover {
+    color: rgba(84, 7, 7, 0.92);
+}
+
+.ls-container {
+    width: 250px;
+    height: 100%;
+}
+
+.mw-lang, .mw-social {
+    width: 100%;
+}
+
+.title {
+    max-width: 100%;
+    max-height: auto;
+}
+
+/*======================================
+                MAIN GRID
+========================================*/
+.mw-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #400c0c;
+    padding-left: 0px;
+    padding-right: 0px;
+    -webkit-box-shadow: 1px 0px 4px 0px rgba(64,12,12,1);
+    -moz-box-shadow: 1px 0px 4px 0px rgba(64,12,12,1);
+    box-shadow: 1px 0px 4px 0px rgba(64,12,12,1);
+}
+
+.mw-sidebar--sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 20px;
+    font-family: Calibri;
+}
+
+.mw-line{
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+
+.mw-menu,
+.sub-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub-menu {
+    background: rgba(84, 7, 7, 0.92);
+}
+
+.mw-menu--link,
+.sub-menu--link {
+    color: #e8b548;
+    display: block;
+    text-decoration: none !important;
+    padding-left: 20px;
+}
+
+.sub-menu--link {
+    padding-left: 40px;
+}
+
+.mw-line,
+.mw-sidebar .mw-menu--item,
+.mw-sidebar .sub-menu--item {
+    border-bottom: #78441f solid 1px;
+}
+
+.mw-menu--item > .mw-menu--link:hover,
+.sub-menu--item > .sub-menu--link:hover {
+    color: #ffffff;
+}
+
+.sub-menu--media .sub-menu--item,
+.sub-menu--interesting .sub-menu--item{
+    display: none;
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.bg-white {
+    background: #ffffff;
+}
+
+.mw-main {
+    min-height: 800px;
+}
+
+.mw-page--title {
+    color: #e8b548;
+    text-shadow: 1px 1px 1px #d8d8d8;
+    border-bottom: 1px solid #e8b548;
+}
+
+.badge-mw {
+    color: #ffffff;
+    background-color: #e8b548;
+}
+
+.mw-angle {
+    line-height: 30px;
+    float: right;
+    color: #e8b548;
+    margin-right: 20px;
+}
+
+.page-link {
+    color: #400c0c;
+}
+
+.page-link:hover {
+    color: #400c0c;
+}
+
+/*======================================
+            MAIN PAGE CONTENT
+========================================*/
+.card{
+    max-width: 260px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.10);;
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.10);;
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.10);;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.card-container {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.lang-item {
+    list-style: none;
+    display: inline;
+    color: #400c0c;
+    font-weight: bold;
+}
+
+.lang-item a {
+    color: #400c0c;
+}
+
+.lang-item a:hover {
+    color: #400c0c;
+}
+
+/*======================================
+                 FOOTER
+========================================*/
+.footer {
+    height: 100px;
+    line-height: 100px;
+    background-color: #ffffff;
+    border-top: 1px solid #e8b548;
+}
+
+.social-footer {
+    float: right;
+}
+
+.social-footer > a {
+    text-decoration: none;
+}
+
+.footer-phrase {
+    font-family: 'Pattaya', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #400c0c;
+    position: relative;
+    top: 9px;
+}
+
+/*======================================
+                 BLOGS
+========================================*/
+.title--dark,
+.title--dark > a {
+    color: #400c0c;
+}
+
+.title--dark:hover,
+.title--dark > a:hover {
+    color: rgba(84, 7, 7, 0.92);
+}
+
+/*======================================
+                 ARTICLES
+========================================*/
+.mw-article {
+    margin-bottom: 20px;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.mw-article--date {
+    font-size: smaller;
+}
+
+@media (min-width: 576px) {
+    .mw-article--info {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 577px) {
+    .mw-article--info {
+        margin-top: 20px;
+    }
+}
+
+.mw-post--video iframe {
+    width: 260px;
+    height: 180px;
+}
+
+.mw-single--image {
+    float: left;
+    clear: both;
+    margin-right: 14px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.30);
+}
+
+@media (max-width: 577px) {
+    .mw-single--image {
+        float: none;
+        clear: both;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*======================================
+                 SEARCH
+========================================*/
+.search-wrapper--inner {
+    border-bottom: 1px solid #e8b548;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-input {
+    border: none;
+    border-radius: unset;
+    border-left: 1px dashed #e8b548;
+    width: 30%;
+}
+
+.search-input:focus {
+    border-left: 1px dashed #400c0c;
+    box-shadow: 0 0 3px #400c0c;
+    -moz-box-shadow: 0 0 3px #400c0c;
+    -webkit-box-shadow: 0 0 3px #400c0c;
+}
+
+@media (max-width: 577px) {
+    .search-input {
+        width: 100%;
+        border: none;
+    }
+
+    .search-input:focus {
+        border: none;
+    }
+}
+
+div.card-container--search {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*======================================
+                 CONTACTS
+========================================*/
+
+.contacts-title {
+    color: #400c0c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contacts-content {
+    color: #400c0c;
+    font-size: 18px;
+}
+
+.contacts-item {
+    margin-bottom: 10px;
+}
+
+/*======================================
+                ICONS
+========================================*/
+
+.mw-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.mw-icon:hover {
+    opacity: 0.8;
+}
+
+
+/*======================================
+                 COMMON
+========================================*/
+
+.mw-color--link {
+    color: #e8b548;
+}
+
+.mw-color--link:hover {
+    color: #400c0c;
+}
+
+/*======================================
+                 VACANCIES
+========================================*/
+
+.awsm-job-form {
+    display: none;
+}

@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/side-button.css">
     <link rel="stylesheet" href="css/loader.css">
 </head>
@@ -40,8 +40,8 @@
                         <li class="mw-menu--item"><a class="mw-menu--link" href="#">Мы</a></li>
                         <li class="mw-menu--item"><a class="mw-menu--link" href="#">Главная</a></li>
                         <li class="mw-menu--item"><a class="mw-menu--link" href="#">Деятельность "ВАМ"</a></li>
-                        <li class="mw-menu--item no-border">
-                            <a class="mw-menu--link" id="mw-media" href="#">
+                        <li class="mw-menu--item no-border" id="mw-menu--itemID-1082">
+                            <a class="mw-menu--link" id="mw-menu--linkID-1082" href="#">
                                 Медиа
                                 <i class="fa fa-angle-down mw-angle"></i>
                             </a>
@@ -51,8 +51,8 @@
                                 <li class="sub-menu--item"><a class="sub-menu--link" href="#">Видео</a></li>
                             </ul>
                         </li>
-                        <li class="mw-menu--item no-border">
-                            <a class="mw-menu--link" id="mw-interesting" href="#">
+                        <li class="mw-menu--item no-border" id="mw-menu--itemID-1081">
+                            <a class="mw-menu--link" id="mw-menu--linkID-1081" href="#">
                                 Интересное
                                 <i class="fa fa-angle-down mw-angle"></i>
                             </a>
@@ -91,15 +91,18 @@
                             	</select>
                             </div>
                             <div class="mw-social d-flex flex-row justify-content-center align-items-center">
-	                            <a class="mw-social--link" href="#">
-	                                <i class="fab fa-facebook-f fa-2x"></i>
-	                            </a>
-	                            <a class="mw-social--link" href="#">
-	                                <i class="fab fa-instagram fa-2x"></i>
-	                            </a>
-	                            <a class="mw-social--link" href="#">
-	                                <i class="fab fa-youtube fa-2x"></i>
-	                            </a>
+                                <a class="mw-social--link" href="#">
+                                    <img class="mw-icon" src="icons/facebook.svg" />
+                                </a>
+                                <a class="mw-social--link" href="#">
+                                    <img class="mw-icon" src="icons/instagram.svg" />
+                                </a>
+                                <a class="mw-social--link" href="#">
+                                    <img class="mw-icon" src="icons/youtube.svg" />
+                                </a>
+                                <a class="mw-social--link" href="#">
+                                    <img class="mw-icon" src="icons/telegram.svg" />
+                                </a>
                             </div>
                     	</div>
                 	</div>
@@ -157,6 +160,13 @@
                 <!-- конец меню для мобильных устройств -->
 
                 <!-- строка поиска -->
+                <div class="search-wrapper">
+                    <form role="search" class="search-form" method="get" action="">
+                        <div class="search-wrapper--inner">
+                            <input type="search" class="form-control search-input" placeholder="Поиск" value="" name="s" title="Поиск" autocomplete="off" />
+                        </div>
+                    </form>
+                </div>
                 <!-- конец строки поиска -->
 
                 <!-- область для рекламы -->
@@ -257,16 +267,19 @@
                 <!-- подвал -->
                 <footer class="footer">
                     <div class="container">
-                        <span>Всегда с ВАМи!</span>
+                        <span class="footer-phrase">Всегда с ВАМи!</span>
                         <div class="social-footer d-flex flex-row justify-content-center align-items-center">
                             <a class="mw-social--link" href="#">
-                                <i class="fab fa-facebook-f fa-2x"></i>
+                                <img class="mw-icon" src="icons/facebook.svg" />
                             </a>
                             <a class="mw-social--link" href="#">
-                                <i class="fab fa-instagram fa-2x"></i>
+                                <img class="mw-icon" src="icons/instagram.svg" />
                             </a>
                             <a class="mw-social--link" href="#">
-                                <i class="fab fa-youtube fa-2x"></i>
+                                <img class="mw-icon" src="icons/youtube.svg" />
+                            </a>
+                            <a class="mw-social--link" href="#">
+                                <img class="mw-icon" src="icons/telegram.svg" />
                             </a>
                         </div>
                     </div>
