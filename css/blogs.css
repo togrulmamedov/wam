@@ -88,3 +88,53 @@ section{
   color:#2E3434;
   text-decoration:none;
 }
+
+/*
+  Blog cards
+*/
+
+.blog-card {
+  max-width: 720px;
+  position: relative;
+  margin-left: 30px;
+}
+
+.blog-author {
+  position: absolute;
+  top: 6%;
+  left: -5%;
+}
+
+@media (max-width: 577px) {
+  .blog-card {
+    margin-left: 0px;
+  }
+
+  .container-cards .card:not(:first-child){
+    margin-top: 50px;
+  }
+
+  .blog-author {
+    top: -8%;
+    left: 50%;
+    margin-left: -25px;
+  }
+
+  .blog-author--about {
+    top: -31px;
+  }
+}
+
+.blog-author--image {
+  height: 50px;
+  width: 50px;
+  border-radius: 72px;
+  border: 2px solid #78441f;
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.10);
+}
+
+.about-card {
+  border: 1px solid #78441f;
+}
