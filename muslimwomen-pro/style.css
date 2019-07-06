@@ -3,7 +3,7 @@
     Author: Sevil & Tohrul
     Author URI: https://www.facebook.com/tohrulProfile
     Description: Muslim women pro theme for WordPress
-    Version: 1.0.1
+    Version: 1.1.0
     Tags: bootstrap, muslim, women, pro, wordpress
 */
 
@@ -210,7 +210,7 @@
 .footer-phrase {
     font-family: 'Pattaya', sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     color: #400c0c;
     position: relative;
     top: 9px;
@@ -224,9 +224,19 @@
     color: #400c0c;
 }
 
+.title--light,
+.title--light > a {
+    color: #ffffff;
+}
+
 .title--dark:hover,
 .title--dark > a:hover {
     color: rgba(84, 7, 7, 0.92);
+}
+
+.title--light:hover,
+.title--light > a:hover {
+    color: #ffffff;
 }
 
 /*======================================
@@ -248,14 +258,21 @@
 }
 
 @media (max-width: 577px) {
-    .mw-article--info {
-        margin-top: 20px;
-    }
+
 }
 
 .mw-post--video iframe {
     width: 260px;
     height: 180px;
+}
+
+.mw-blogpost--video iframe {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 3px;
 }
 
 .mw-single--image {
@@ -267,6 +284,10 @@
 }
 
 @media (max-width: 577px) {
+    .mw-article--info {
+        margin-top: 20px;
+    }
+
     .mw-single--image {
         float: none;
         clear: both;
@@ -274,6 +295,20 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .mw-blogpost--video iframe {
+        position: unset;
+    }
+
+    /* temporal crutch */
+    .post-customized > p:first-of-type {
+        text-align: center;
+    }
+
+    .post-customized > p > iframe {
+        width: 260px;
+        height: 180px;
     }
 }
 
@@ -360,4 +395,19 @@ div.card-container--search {
 
 .mw-color--link:hover {
     color: #400c0c;
+}
+
+/*======================================
+                 VACANCIES
+========================================*/
+
+.awsm-job-form {
+    display: none;
+}
+
+/*======================================
+========================================*/
+
+.nocomments {
+    display: none;
 }

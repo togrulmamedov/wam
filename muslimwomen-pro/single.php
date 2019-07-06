@@ -12,4 +12,6 @@
         </div>
     <?php endwhile; endif; ?>
 </div>
+
+<?php comments_template(); ?>
 <?php get_footer(); ?>
