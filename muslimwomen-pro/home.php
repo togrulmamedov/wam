@@ -35,10 +35,10 @@
     <nav aria-label="MW pagination">
         <ul class="pagination justify-content-center">
             <li class="page-item">
-                <?php next_posts_link('< Предыдущая'); ?>
+                <?php next_posts_link('< ' . pll__('Предыдущая')); ?>
             </li>
             <li class="page-item">
-                <?php previous_posts_link('Следующая >'); ?>
+                <?php previous_posts_link(pll__('Следующая') . ' >'); ?>
             </li>
         </ul>
     </nav>

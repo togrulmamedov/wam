@@ -1,4 +1,5 @@
-<?php?>
+<?php
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -6,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="keywords" content="мусульманка, ассоциация, украина, всеукраинская ассоциация мусульманок, ислам, религия, добро, истина">
+    <meta name="google-site-verification" content="5iaIsOOcihTLgRXOdO1Hcw2b0ie9Th_Z-TIXnFDItF8" />
 
     <title><?php wp_title('|'); ?></title>
 

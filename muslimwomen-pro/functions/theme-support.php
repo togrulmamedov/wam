@@ -79,6 +79,9 @@ function mw_register_strings(){
     pll_register_string('mw-pro', 'Результаты поиска');
     pll_register_string('mw-pro', 'найдено');
     pll_register_string('mw-pro', '04071, г. Киев, ул. Лукьяновская 46');
+    pll_register_string('mw-pro', 'Предыдущая');
+    pll_register_string('mw-pro', 'Следующая');
+    pll_register_string('mw-pro', 'Подробнее');
 
     pll_register_string('mw-pro', 'Главная');
     pll_register_string('mw-pro', 'Медиа');
@@ -143,4 +146,3 @@ function arphabet_widgets_init() {
 }
 
 add_action( 'widgets_init', 'arphabet_widgets_init' );
-?>

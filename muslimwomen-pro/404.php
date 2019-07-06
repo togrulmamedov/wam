@@ -1,9 +1,8 @@
 <?php
 /*
-    Template Name: 404 template
+	Template Name: 404 template
 */
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>

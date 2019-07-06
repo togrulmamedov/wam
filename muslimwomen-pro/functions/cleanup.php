@@ -38,9 +38,3 @@ function mw_remove_wp_meta_version() {
 }
 
 add_filter('the_generator', 'mw_remove_wp_meta_version');
-
-/*
-==============================
-    
-==============================
-*/

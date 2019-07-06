@@ -22,9 +22,3 @@ function wpshout_custom_sizes($sizes){
         'custom-medium' => __('Custom Medium'),
     ));
 }
-
-/*
-==============================
-    INITIALIZE WIDGETS ADMIN MENU
-==============================
-*/
