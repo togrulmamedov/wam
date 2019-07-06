@@ -224,9 +224,19 @@
     color: #400c0c;
 }
 
+.title--light,
+.title--light > a {
+    color: #ffffff;
+}
+
 .title--dark:hover,
 .title--dark > a:hover {
     color: rgba(84, 7, 7, 0.92);
+}
+
+.title--light:hover,
+.title--light > a:hover {
+    color: #ffffff;
 }
 
 /*======================================
